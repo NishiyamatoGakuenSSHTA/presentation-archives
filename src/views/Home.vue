@@ -231,7 +231,7 @@ export default {
     },
     inputcourse: {
       get() {
-        return this.filter.year;
+        return this.filter.course;
       },
       set(val) {
         this.filter.course = val;
