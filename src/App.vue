@@ -5,7 +5,6 @@
   <v-app>
     <v-app-bar
       app
-      absolute
       color="#044B89"
       dark
       shrink-on-scroll
