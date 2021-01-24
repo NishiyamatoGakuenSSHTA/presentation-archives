@@ -1,5 +1,11 @@
 <template>
-  <div class="help">
-    <h1>This is an about page</h1>
-  </div>
+  <v-container align="center">
+    <v-card
+    flat
+    >
+    <v-card-title>
+      鋭意制作中
+    </v-card-title>
+    </v-card>
+  </v-container>
 </template>

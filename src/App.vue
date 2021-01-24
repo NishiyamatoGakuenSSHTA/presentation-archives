@@ -5,14 +5,17 @@
   <v-app>
     <v-app-bar
       app
+      absolute
       color="#044B89"
       dark
-      shrink-on-scroll
       prominent
     >
     <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-    <v-app-bar-title>西大和学園SS発表会アーカイブ</v-app-bar-title>
+    <v-app-bar-title>
+      西大和学園<br/>
+      SS発表会アーカイブ<br/>
+    </v-app-bar-title>
     </v-app-bar>
 
     <v-navigation-drawer
@@ -32,7 +35,7 @@
             <v-list-item-title>検索ホーム</v-list-item-title>
           </v-list-item>
 
-          <v-list-item to="/about">
+          <v-list-item to="/help">
             <v-list-item-icon>
               <v-icon>mdi-help</v-icon>
             </v-list-item-icon>
