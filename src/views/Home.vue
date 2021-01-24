@@ -62,8 +62,8 @@
               <v-select
                 v-model="inputschoolclass"
                 @change="filtered"
-                item-text="`${filter.schoolyear}`"
-                :items="selector_options.schoolyear_options"
+                item-text="`${filter.schoolclass}`"
+                :items="selector_options.schoolclass_options"
                 label="クラス"
                 dense
               ></v-select>
@@ -103,7 +103,7 @@
           v-bind:video="item"
           v-bind:key="item.id"
         >
-          <v-card min-width="360" outlined>
+          <v-card min-width="260px" outlined>
             <v-card-title>
               {{ item.name }}
             </v-card-title>
@@ -128,8 +128,10 @@
         v-bind:key="item.id"
         outlined
       >
-        <v-card-title>
+        <v-card-sub-title>
           <v-card-actions>
+            {{ item.name }}
+            <v-spacer></v-spacer>
             <v-btn
               fab
               icon
@@ -137,15 +139,10 @@
               color="#FF0000"
               target="_brank"
             >
-              <v-icon>mdi-youtube</v-icon>
+              <v-icon>mdi-open-in-new</v-icon>
             </v-btn>
           </v-card-actions>
-          <v-card-actions>
-            <v-btn :href="item.videoid" elevation="0" text target="_brank" x-large>
-              {{ item.name }}
-            </v-btn>
-          </v-card-actions>
-        </v-card-title>
+        </v-card-sub-title>
       </v-card>
     </v-container>
     <!-- なんもないとき -->
