@@ -1,10 +1,13 @@
 <template>
+  <!-- ローディング画面 -->
   <v-container v-if="show_loading">
     <v-overlay>
       <v-progress-circular indeterminate size="64"></v-progress-circular>
     </v-overlay>
   </v-container>
+  <!-- メイン -->
   <v-container v-else>
+    <!-- 条件カード -->
     <v-card elevation="2">
       <v-card-title
         >条件
@@ -103,11 +106,20 @@
           v-bind:video="item"
           v-bind:key="item.id"
         >
-          <v-card min-width="260px" outlined>
+          <v-card min-width="260px" outlined height="100%">
+            <v-row style="height: 110%;">
+            <v-col align-self="start" cols="12">
             <v-card-title>
-              {{ item.name }}
+              {{ item.thema }}
             </v-card-title>
-            <v-card-subtitle> 投稿日: {{ item.publishedAt }} </v-card-subtitle>
+            <v-card-subtitle>
+              {{ item.course }}{{ item.schoolyear }}-{{ item.schoolclass}}
+              <br/>
+              投稿日: {{ item.publishedAt }}
+            </v-card-subtitle>
+            </v-col>
+
+            <v-col align-self="end" cols="12">
             <v-card-actions>
               <v-card-text>
                 {{ item.eventname }}
@@ -116,6 +128,8 @@
                 <v-icon>mdi-youtube</v-icon></v-btn
               >
             </v-card-actions>
+            </v-col>
+            </v-row>
           </v-card>
         </v-col>
       </v-row>
